@@ -23,7 +23,7 @@ def plot_cities(cities):
         plots[language][1].append(latitude)
 
     
-    for language, (x, y) in plots.items():
+    for language, (x, y) in plots.items(): # .items()应用于词典
         plt.scatter(x, y, color=colors[language], marker=markers[language],
                           label=language, zorder=10)
 

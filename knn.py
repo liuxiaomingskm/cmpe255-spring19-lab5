@@ -38,9 +38,9 @@ def predict_preferred_language_by_city(k_values, cities):
     for k in k_values:
         numPred=0
         for city in cities:
-            newCities=cities.copy()
-            newCities.remove(city)
-            pred=knn_classify(k,newCities,city[0])
+            new_Cities=cities.copy()
+            new_Cities.remove(city)
+            pred=knn_classify(k,new_Cities,city[0])
             if(pred==city[1]): numPred+=1
         print(k, "neighbor[s]:", numPred, "correct out of", len(cities))
         
